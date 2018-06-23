@@ -5,12 +5,28 @@ public class Order implements Orderable {
     private int id;
     private String status;
 
+    Order() {
+        id = orderCount++;
+        status = "New";
+    }
+
     public boolean checkout() {
-        return true;
+        if (status.equals("New")) {
+            status = "Checked";
+            return true;
+        } else {
+            return false;
+        }
+
     }
 
     public boolean pay() {
-        return true;
+        if (status.equals("Checked")) {
+            status = "Payed";
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public String getStatus() {
