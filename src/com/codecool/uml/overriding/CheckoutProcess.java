@@ -6,7 +6,7 @@ public class CheckoutProcess extends AbstractProcess {
         if (item.checkout()) {
             System.out.println("Successful checkout!");
         } else {
-            System.err.println("Some error happened during checkout!");
+            System.out.println("Some error happened during checkout!");
         }
     }
 }

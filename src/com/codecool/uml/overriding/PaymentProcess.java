@@ -6,7 +6,7 @@ public class PaymentProcess extends AbstractProcess {
         if (item.pay()) {
             System.out.println("Successful payment!");
         } else {
-            System.err.println("Some error happened during payment!");
+            System.out.println("Some error happened during payment!");
         }
     }
 }
